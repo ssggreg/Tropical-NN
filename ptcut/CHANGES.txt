@@ -1,0 +1,45 @@
+
+PtCut -- Compute Tropical Prevarieties of Polynomial Systems
+Copyright 2017-2019 Christoph Lüders
+---------------------------------------------------------------------------
+
+Legend:
+
+  * New feature
+  + Improvement
+  ! Software change requires modification of your configuration
+  x Bugfix
+  - Information only
+
+
+Revision history: ---------------------------------------------------------
+
+
+PtCut v3.3.3 -- 2019-04-02
+
+x Fixes and workarounds for Python 2.x, SageMath and Linux OS.  Now, PtCut has
+  been tested under:
+
+  -- Python 3.7.2 under Windows 8.1
+  -- Python 3.7.1 under Windows 10 v1809
+  -- Python 2.7.12 under Ubuntu 16.04
+  -- Python 3.5.2 under Ubuntu 16.04
+  -- SageMath 7.5.1 (Python 2.7.13) under Ubuntu 16.04
+
++ Computation of connected components is working again.  graph.py can be called
+  on its own with the basename of individual .lp files or with the filename of
+  a multi-lp file.
+
+  Example: you have solutions saved in db\BIOMD0000000026\ep5-sol-*.lp:
+    graph.py db\BIOMD0000000026\ep5-sol-
+
+  Example: you have all solutions in db\BIOMD0000000026\ep5-solutions.txt:
+    graph.py db\BIOMD0000000026\ep5-solutions.txt
+
++ Detect rational systems and multiply each equation by the lcm of its monomials.
+
+- Run-time errors are now logged to file as well.
+
+
+
+EOF.

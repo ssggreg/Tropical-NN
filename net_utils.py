@@ -218,7 +218,7 @@ def train_model_cc_fast(model, trainloader,inference_loader, criterion, optimize
             def closure():
                 optimizer.zero_grad()
                 logits = model.forward(inputs)
-                loss = criterion(logits, labels)
+                loss = criterion(logits,labels)
                 loss.backward()
                 return loss
             loss = optimizer.step(closure)
